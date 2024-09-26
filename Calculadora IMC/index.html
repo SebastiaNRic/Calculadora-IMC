@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Calculadora de IMC</h1>
+
+        <p class="lead text-center">El Índice de Masa Corporal (IMC) es una medida utilizada para evaluar el peso en
+            relación con la altura de una persona. Se utiliza para clasificar el estado de peso, ayudando a identificar
+            posibles problemas de salud relacionados con el peso.</p>
+
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" class="form-control" required>
+
+        <label for="height">Estatura (m):</label>
+        <input type="number" id="height" step="0.01" class="form-control" required>
+
+        <label for="ageGroup">Clasificación:</label>
+        <select id="ageGroup" class="form-control">
+            <option value="adult">Adulto</option>
+            <option value="child">Niño</option>
+        </select>
+
+        <button id="calculateBtn" class="btn btn-success mt-3">Calcular IMC</button>
+        <div class="row mt-3">
+            <div id="infoCards" class="col-md-6"></div>
+            <div id="recommendations" class="col-md-6"></div>
+        </div>
+        <div id="result" class="result mt-4"></div>
+
+        <div class="row mt-4">
+            <div class="col-md-10">
+                <div id="imcTable" class="imc-table"></div>
+            </div>
+            <div class="col-md-2">
+                <img id="personImage" src="" alt="Representación de IMC" class="img-fluid" style="display:none;" />
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
